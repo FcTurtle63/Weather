@@ -32,7 +32,8 @@ app.post("/", function(req1, res1) {
     console.log(response.statusCode);
     response.on("data", function(data) {
       const weatherData = JSON.parse(data);
-      const temp = Math.round(weatherData.main.temp);
+      // const temp = Math.round(weatherData.main.temp);
+      const temp = Math.round(weatherData.temp);
       const description = weatherData.weather[0].description;
       const icon = weatherData.weather[0].icon;
       const imageURL = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
