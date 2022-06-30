@@ -1,7 +1,7 @@
 const express = require("express");
 const https = require("https");
 const bodyParser = require("body-parser");
-const sessionStorage = require("sessionStorage");
+// const sessionStorage = require("sessionStorage");
 const app = express();
 
 app.use(bodyParser.urlencoded({
@@ -45,7 +45,7 @@ app.post("/", function(req1, res1) {
 
 
         //using sessionStorage
-        sessionStorage.setItem('descriptionresult', description);
+        // sessionStorage.setItem('descriptionresult', description);
 
         var fName = sessionStorage.getItem("descriptionresult");
         console.log("siamo in app.js " + fName);
